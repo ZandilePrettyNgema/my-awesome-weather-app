@@ -37,6 +37,8 @@ a {
   width: 70%;
   font-size: 16px;
   border-radius: 5px;
+  outline-color: #87ceeb;
+  border-color: #00bfff;
 }
 .search-button {
   padding: 16px 25px;
@@ -57,9 +59,8 @@ a {
   margin-top: 25px;
 }
 .weather-icon {
-  font-size: 40px;
-  margin-right: 5px;
-  margin-top: 18px;
+  width: 88px;
+  height: 88px;
 }
 .current-temperature {
   font-size: 88px;
