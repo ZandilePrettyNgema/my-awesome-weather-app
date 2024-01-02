@@ -21,10 +21,7 @@ footer {
 a {
   color: blue;
 }
-img {
-  margin-left: 6px;
-  margin-bottom: 10px;
-}
+
 .weather-app {
   background: #fff;
   border: 1px solid #fff;
@@ -81,6 +78,8 @@ img {
 }
 .weather-forecast {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .weather-forecast-day {
   opacity: 0.5;
@@ -98,4 +97,9 @@ img {
 .weather-forecast-min-temperature {
   opacity: 0.9;
   margin-left: 15px;
+}
+.weather-forecast-icon {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
