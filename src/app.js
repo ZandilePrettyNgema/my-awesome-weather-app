@@ -16,6 +16,7 @@ function updateTemperature(response) {
   humidityElememnt.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   iconElement.innerHTML = `<img src = "${response.data.condition.icon_url}" class="weather-icon"/>`;
+  fetchForecast(response.data.city);
 }
 function formattedDate(date) {
   let hours = date.getHours();
@@ -50,7 +51,14 @@ function handleSearchInput(event) {
   searchCity(searchElement.value);
 }
 
-function displayWeatherForecast() {
+function fetchForecast(city) {
+  let apiKey = "5e64tc31ab6af99145eb23afo3d1f8c0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios(apiUrl).then(displayWeatherForecast);
+}
+
+function displayWeatherForecast(response) {
+  console.log(response.data);
   let day = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -75,4 +83,4 @@ function displayWeatherForecast() {
 let searchInput = document.querySelector("#search-form");
 searchInput.addEventListener("submit", handleSearchInput);
 searchCity("Durban");
-displayWeatherForecast();
+
