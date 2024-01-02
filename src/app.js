@@ -83,4 +83,3 @@ function displayWeatherForecast(response) {
 let searchInput = document.querySelector("#search-form");
 searchInput.addEventListener("submit", handleSearchInput);
 searchCity("Durban");
-
